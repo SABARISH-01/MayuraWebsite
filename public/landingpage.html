@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Mayura Groups Limited - Housing Development, Savings Schemes, Loans and Insurance services in Coimbatore, Tamil Nadu. ISO 9001:2015 Certified."/>
+<title>Mayura Groups Limited | Crafting Infrastructure, Enriching Lives</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy: #1B2D5B;
+  --navy-dark: #111e3d;
+  --navy-light: #2a4080;
+  --gold: #C9A84C;
+  --gold-light: #e8c97a;
+  --gold-pale: #f5ead6;
+  --green: #2D6E4E;
+  --green-light: #3a8f64;
+  --white: #ffffff;
+  --grey-bg: #F4F4F6;
+  --grey-light: #e8e8ec;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a4a6a;
+  --text-light: #8888aa;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-dark);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; }
+
+/* ─── NAVBAR ─── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:999;
+  background: rgba(27,45,91,0.97);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  padding: 0 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 70px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+}
+
+.nav-logo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+  padding: 4px;
+}
+
+.nav-logo-icon {
+  width: 42px; height: 42px;
+  background: var(--gold);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--navy-dark);
+}
+
+.nav-logo-text {
+  display: flex; flex-direction: column;
+  line-height: 1.2;
+}
+
+.nav-logo-text span:first-child {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 700;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+.nav-logo-text span:last-child {
+  font-size: 10px; color: var(--gold);
+  letter-spacing: 2px; text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex; gap: 32px; list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 13px; font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+.nav-cta {
+  background: var(--gold);
+  color: var(--navy-dark) !important;
+  padding: 8px 20px !important;
+  border-radius: 4px;
+  font-weight: 600 !important;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--gold-light) !important; color: var(--navy-dark) !important; }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { width: 24px; height: 2px; background: white; transition: 0.3s; }
+
+.mobile-menu {
+  display: none;
+  position: fixed; top: 70px; left: 0; right: 0;
+  background: var(--navy-dark);
+  padding: 20px 5%;
+  flex-direction: column; gap: 16px;
+  z-index: 998;
+}
+
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  color: white; text-decoration: none;
+  font-size: 15px; padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ─── HERO ─── */
+#home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
+  position: relative;
+  display: flex; align-items: center;
+  overflow: hidden;
+  padding-top: 70px;
+}
+
+.hero-pattern {
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(45,110,78,0.08) 0%, transparent 40%),
+    radial-gradient(circle at 60% 80%, rgba(201,168,76,0.05) 0%, transparent 30%);
+}
+
+.hero-grid {
+  position: absolute; inset: 0; opacity: 0.04;
+  background-image: linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1200px; margin: 0 auto;
+  padding: 80px 5%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold-light);
+  padding: 6px 16px; border-radius: 20px;
+  font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.hero-title {
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 700;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero-title span { color: var(--gold); }
+
+.hero-tagline {
+  font-size: 16px; color: rgba(255,255,255,0.65);
+  margin-bottom: 12px;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.hero-desc {
+  font-size: 15px; color: rgba(255,255,255,0.7);
+  line-height: 1.7; margin-bottom: 36px;
+  max-width: 480px;
+}
+
+.hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy-dark);
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 8px 20px rgba(201,168,76,0.3); }
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 14px; font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.hero-visual {
+  display: flex; justify-content: center; align-items: center;
+}
+
+.hero-card {
+  background: rgba(255,255,255,0.06);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 360px;
+}
+
+.hero-logo-svg {
+  margin: 0 auto 24px;
+}
+
+.hero-logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto 24px;
+  display: block;
+  background: rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 8px;
+}
+
+.hero-company-name {
+  font-size: 28px; font-weight: 700;
+  color: white; margin-bottom: 4px;
+  letter-spacing: 2px;
+}
+
+.hero-company-sub {
+  font-size: 11px; color: var(--gold);
+  letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.hero-stats {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; margin-top: 24px;
+}
+
+.hero-stat {
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px; padding: 16px 12px;
+}
+
+.hero-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 700;
+  color: var(--gold);
+}
+
+.hero-stat-label {
+  font-size: 11px; color: rgba(255,255,255,0.6);
+  margin-top: 2px; letter-spacing: 0.5px;
+}
+
+.iso-badge-hero {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(45,110,78,0.2);
+  border: 1px solid rgba(45,110,78,0.4);
+  border-radius: 8px; padding: 10px 16px;
+  margin-top: 20px;
+  color: #7dd9a8; font-size: 12px; font-weight: 500;
+}
+
+/* ─── SECTION COMMON ─── */
+section { padding: 90px 5%; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+.section-tag {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  font-weight: 600; margin-bottom: 12px;
+  padding-left: 30px; position: relative;
+}
+.section-tag::before {
+  content: '';
+  position: absolute; left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 20px; height: 1px; background: var(--gold);
+}
+
+.section-title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700; color: var(--navy);
+  line-height: 1.15; margin-bottom: 16px;
+}
+
+.section-desc {
+  font-size: 15px; color: var(--text-mid);
+  line-height: 1.7; max-width: 560px;
+}
+
+/* ─── ABOUT ─── */
+#about { background: var(--grey-bg); }
+
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 70px; align-items: center;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-img-block {
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 50px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-img-block::before {
+  content: '';
+  position: absolute; top: -40px; right: -40px;
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.1);
+}
+
+.about-img-block::after {
+  content: '';
+  position: absolute; bottom: -30px; left: -30px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: rgba(45,110,78,0.1);
+}
+
+.about-peacock {
+  font-size: 80px; margin-bottom: 16px;
+}
+
+.about-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; color: white;
+  font-style: italic; line-height: 1.4;
+  position: relative; z-index: 1;
+}
+
+.about-quote::before { content: '"'; font-size: 60px; color: var(--gold); opacity: 0.5; line-height: 0; vertical-align: -20px; }
+
+.about-accent {
+  position: absolute;
+  bottom: -20px; right: -20px;
+  width: 80px; height: 80px;
+  background: var(--gold);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; font-weight: 700;
+  color: var(--navy); text-align: center;
+  line-height: 1.3;
+}
+
+.about-pillars {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; margin-top: 32px;
+}
+
+.pillar {
+  background: white;
+  border-radius: 10px; padding: 20px;
+  border-left: 3px solid var(--gold);
+}
+
+.pillar-icon { font-size: 24px; margin-bottom: 8px; }
+.pillar-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.pillar-text { font-size: 12px; color: var(--text-mid); line-height: 1.5; }
+
+/* ─── SERVICES ─── */
+#services { background: white; }
+
+.services-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 50px; flex-wrap: wrap; gap: 20px;
+}
+
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  border-radius: 16px; padding: 36px 28px;
+  position: relative; overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(27,45,91,0.15);
+}
+
+.service-card.primary {
+  background: var(--navy);
+  color: white;
+  grid-column: span 1;
+}
+
+.service-card.gold-card {
+  background: var(--gold-pale);
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+.service-card.green-card {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+  color: white;
+}
+
+.service-card.light-card {
+  background: var(--grey-bg);
+  border: 1px solid var(--grey-light);
+}
+
+.service-card.wide {
+  grid-column: span 2;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center;
+}
+
+.service-icon {
+  width: 56px; height: 56px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; margin-bottom: 20px;
+}
+
+.primary .service-icon { background: rgba(255,255,255,0.1); }
+.gold-card .service-icon { background: rgba(201,168,76,0.2); }
+.green-card .service-icon { background: rgba(255,255,255,0.15); }
+.light-card .service-icon { background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+.service-title {
+  font-size: 20px; font-weight: 700;
+  margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.primary .service-title, .green-card .service-title { color: white; }
+.gold-card .service-title, .light-card .service-title { color: var(--navy); }
+
+.service-desc {
+  font-size: 13px; line-height: 1.6;
+}
+
+.primary .service-desc, .green-card .service-desc { color: rgba(255,255,255,0.75); }
+.gold-card .service-desc, .light-card .service-desc { color: var(--text-mid); }
+
+.service-tag {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 4px 12px; border-radius: 20px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+}
+
+.primary .service-tag { background: rgba(201,168,76,0.2); color: var(--gold-light); }
+.gold-card .service-tag { background: rgba(201,168,76,0.25); color: #8a6a20; }
+.green-card .service-tag { background: rgba(255,255,255,0.2); color: white; }
+.light-card .service-tag { background: rgba(27,45,91,0.08); color: var(--navy); }
+
+/* ─── WHY CHOOSE ─── */
+#why { background: var(--navy); padding: 90px 5%; }
+#why .section-title { color: white; }
+#why .section-desc { color: rgba(255,255,255,0.65); }
+#why .section-tag { color: var(--gold-light); }
+#why .section-tag::before { background: var(--gold-light); }
+
+.why-grid {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 70px; align-items: center; margin-top: 50px;
+}
+
+.why-features { display: flex; flex-direction: column; gap: 24px; }
+
+.why-feature {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 24px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+
+.why-feature:hover { background: rgba(255,255,255,0.08); }
+
+.why-feature-icon {
+  width: 48px; height: 48px; flex-shrink: 0;
+  background: rgba(201,168,76,0.15);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+}
+
+.why-feature-title { font-size: 16px; font-weight: 600; color: white; margin-bottom: 6px; }
+.why-feature-text { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+.why-cert {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 20px; padding: 40px;
+  text-align: center;
+}
+
+.cert-ring {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+  background: rgba(201,168,76,0.05);
+}
+
+.cert-ring span:first-child {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 700;
+  color: var(--gold);
+}
+
+.cert-ring span:last-child {
+  font-size: 11px; color: rgba(255,255,255,0.6);
+  letter-spacing: 1px;
+}
+
+.cert-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px; font-weight: 700;
+  color: white; margin-bottom: 8px;
+}
+
+.cert-subtitle { font-size: 13px; color: var(--gold); margin-bottom: 16px; }
+.cert-desc { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 24px; }
+
+.cert-no {
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 8px; padding: 12px 20px;
+  display: inline-block;
+  font-size: 13px; color: var(--gold-light);
+  letter-spacing: 1px;
+}
+
+
+/* ─── CAREERS ─── */
+#careers { background: var(--grey-bg); }
+
+.careers-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: start; margin-top: 50px;
+}
+
+.roles-list {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.role-chip {
+  background: white;
+  border: 1px solid var(--grey-light);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy);
+  text-align: center;
+}
+
+.careers-perks { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+
+.perk {
+  display: flex; gap: 16px; align-items: center;
+  background: white; border-radius: 10px; padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.perk-icon { font-size: 24px; }
+.perk-text { font-size: 14px; color: var(--text-mid); font-weight: 500; }
+
+.careers-form {
+  background: white; border-radius: 20px; padding: 40px;
+  box-shadow: 0 4px 20px rgba(27,45,91,0.08);
+}
+
+.form-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 700;
+  color: var(--navy); margin-bottom: 8px;
+}
+
+.form-subtitle { font-size: 13px; color: var(--text-mid); margin-bottom: 28px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.form-group { margin-bottom: 16px; }
+
+.form-group label {
+  display: block; font-size: 12px; font-weight: 600;
+  color: var(--text-mid); text-transform: uppercase;
+  letter-spacing: 0.5px; margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1.5px solid var(--grey-light);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-size: 14px; font-family: 'DM Sans', sans-serif;
+  color: var(--text-dark);
+  background: var(--grey-bg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(27,45,91,0.08);
+  background: white;
+}
+
+.form-group textarea { resize: vertical; min-height: 90px; }
+
+.btn-submit {
+  width: 100%;
+  background: var(--navy);
+  color: white;
+  border: none; border-radius: 8px;
+  padding: 14px; font-size: 15px;
+  font-weight: 600; cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 8px;
+}
+
+.btn-submit:hover { background: var(--navy-light); transform: translateY(-1px); }
+.btn-submit:active { transform: translateY(0); }
+
+.form-note {
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.form-note a {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* ─── CONTACT ─── */
+#contact { background: white; }
+
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 60px; margin-top: 50px;
+}
+
+.contact-block {
+  display: flex; gap: 16px; align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.contact-icon {
+  width: 48px; height: 48px; flex-shrink: 0;
+  background: var(--gold-pale);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+
+.contact-label { font-size: 12px; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+.contact-value { font-size: 15px; color: var(--text-dark); font-weight: 500; line-height: 1.5; }
+.contact-value a { color: var(--navy); text-decoration: none; }
+.contact-value a:hover { color: var(--gold); }
+
+.map-placeholder {
+  width: 100%; height: 280px;
+  background: var(--grey-bg);
+  border-radius: 12px; margin-top: 24px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--grey-light);
+  overflow: hidden;
+}
+
+.map-placeholder iframe {
+  width: 100%; height: 100%; border: 0; border-radius: 12px;
+}
+
+.contact-form-card {
+  background: var(--grey-bg);
+  border-radius: 20px; padding: 40px;
+}
+
+.contact-form-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 700;
+  color: var(--navy); margin-bottom: 24px;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--navy-dark);
+  padding: 60px 5% 30px;
+  color: rgba(255,255,255,0.65);
+}
+
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px; max-width: 1200px; margin: 0 auto;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 30px;
+}
+
+.footer-brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 700;
+  color: white; margin-bottom: 4px;
+}
+
+.footer-tagline { font-size: 12px; color: var(--gold); margin-bottom: 16px; font-style: italic; }
+
+.footer-desc { font-size: 13px; line-height: 1.7; margin-bottom: 20px; }
+
+.footer-iso {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(45,110,78,0.15);
+  border: 1px solid rgba(45,110,78,0.3);
+  border-radius: 6px; padding: 8px 14px;
+  font-size: 12px; color: #7dd9a8;
+}
+
+.footer-col-title {
+  font-size: 13px; font-weight: 600; color: white;
+  text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a {
+  color: rgba(255,255,255,0.55); text-decoration: none;
+  font-size: 13px; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--gold); }
+
+.social-links {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.8);
+  border-radius: 999px;
+  padding: 7px 12px;
+  text-decoration: none;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.social-link:hover {
+  color: var(--gold-light);
+  border-color: rgba(201,168,76,0.45);
+}
+
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+  font-size: 12px;
+}
+
+.footer-cert-no { color: rgba(255,255,255,0.35); }
+
+/* ─── WHATSAPP ─── */
+.wa-btn {
+  position: fixed; bottom: 28px; right: 28px; z-index: 990;
+  width: 56px; height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wa-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+}
+
+.wa-btn svg { width: 30px; height: 30px; }
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content > * { animation: fadeUp 0.7s ease both; }
+.hero-content > *:nth-child(2) { animation-delay: 0.15s; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .about-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .service-card.wide { grid-column: span 2; }
+  .why-grid { grid-template-columns: 1fr; }
+  .careers-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .form-row { grid-template-columns: 1fr; }
+  .about-pillars { grid-template-columns: 1fr; }
+  .roles-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card.wide { grid-column: span 1; display: block; }
+  section { padding: 60px 5%; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">
+    <img src="mayura-log.png" alt="Mayura Groups Limited Logo" class="nav-logo-img"/>
+    <div class="nav-logo-text">
+      <span>MAYURA</span>
+      <span>GROUPS LIMITED</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#careers">Careers</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#why" onclick="toggleMenu()">Why Choose Us</a>
+  <a href="#careers" onclick="toggleMenu()">Careers</a>
+  <a href="#contact" onclick="toggleMenu()">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-pattern"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge">ISO 9001:2015 Certified Company</div>
+      <h1 class="hero-title">
+        Building Dreams,<br/><span>Securing Futures</span>
+      </h1>
+      <p class="hero-tagline">"Crafting Infrastructure, Enriching Lives"</p>
+      <p class="hero-desc">
+        Mayura Groups Limited offers comprehensive housing development, savings schemes, loans, and insurance services — empowering families across Coimbatore to build, save, and thrive.
+      </p>
+      <div class="hero-btns">
+        <a href="#services" class="btn-primary">Explore Our Services</a>
+        <a href="#careers" class="btn-outline">Join Our Team</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <img src="mayura-log.png" alt="Mayura Groups Limited Logo" class="hero-logo-img"/>
+        <div class="hero-company-name">MAYURA</div>
+        <div class="hero-company-sub">Groups Limited</div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">5</div>
+            <div class="hero-stat-label">Services Offered</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">2</div>
+            <div class="hero-stat-label">Branch Locations</div>
+          </div>
+        </div>
+        <div class="iso-badge-hero">
+          ✓ Quality Management Systems Compliant
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-img-block">
+          <img src="mayura-log.png" alt="Mayura Groups Limited" style="width:100%; height:auto; border-radius:14px; object-fit:cover; margin-bottom:16px;"/>
+          <p class="about-quote">Crafting Infrastructure, Enriching Lives</p>
+        </div>
+        <div class="about-accent">ISO<br/>9001<br/>:2015</div>
+      </div>
+      <div class="about-text">
+        <div class="section-tag">Who We Are</div>
+        <h2 class="section-title">A Multi-Industry Company Built on Trust &amp; Purpose</h2>
+        <p class="section-desc" style="margin-bottom:16px;">
+          Mayura Groups Limited is a dynamic and diversified conglomerate with a strong and growing presence across housing, finance, and insurance sectors. Driven by a commitment to innovation, customer satisfaction, and sustainable growth, we strive to create a meaningful, lasting impact in the lives of our clients, partners, and communities.
+        </p>
+        <p style="font-size:15px; color:var(--text-mid); line-height:1.7; margin-bottom:28px;">
+          As an ISO 9001:2015 certified organisation, our processes are rigorously assessed to ensure we consistently deliver on our promises with integrity, transparency, and a deeply human touch.
+        </p>
+        <div class="pillar" style="margin-bottom:16px;">
+          <div class="pillar-icon">👤</div>
+          <div class="pillar-title">Founder &amp; Managing Director - Mr. Manikandan S</div>
+          <div class="pillar-text">Diploma in Civil Engineering with over 10 years of hands-on experience in civil construction and infrastructure, complemented by 5 years in the insurance sector. His cross-domain expertise drives Mayura's integrated approach to housing and financial services.</div>
+        </div>
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">🏠</div>
+            <div class="pillar-title">Our Mission</div>
+            <div class="pillar-text">To deliver exceptional value to customers, partners, and employees while upholding integrity, transparency, and professional excellence.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🎯</div>
+            <div class="pillar-title">Our Vision</div>
+            <div class="pillar-text">To grow as a trusted and innovative multi-sector company creating long-term social and financial impact.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">💡</div>
+            <div class="pillar-title">Innovation</div>
+            <div class="pillar-text">We encourage creative thinking and progressive solutions across every aspect of our business.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🤝</div>
+            <div class="pillar-title">Customer-Centricity</div>
+            <div class="pillar-text">Our clients are our compass. We go beyond expectations to deliver experiences that truly matter.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="services-header">
+      <div>
+        <div class="section-tag">What We Offer</div>
+        <h2 class="section-title">Our Services</h2>
+      </div>
+      <p style="font-size:14px; color:var(--text-mid); max-width:320px; text-align:right;">
+        Five powerful services designed to support you at every stage of life.
+      </p>
+    </div>
+    <div class="services-grid">
+
+      <!-- Housing Development — Wide -->
+      <div class="service-card primary wide">
+        <div>
+          <div class="service-icon">🏗️</div>
+          <h3 class="service-title">Housing Development</h3>
+          <p class="service-desc">We help you turn your dream home into reality with structured housing solutions. From planning to ownership, every step is simplified and guided, affordable, reliable, and designed for long-term security.</p>
+          <span class="service-tag">Construction & Ownership</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); border-radius:12px; padding:24px;">
+          <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:16px;">What's included:</p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+            <li style="font-size:13px; color:rgba(255,255,255,0.8); display:flex; gap:10px;"><span style="color:var(--gold);">✓</span> Home planning consultation</li>
+            <li style="font-size:13px; color:rgba(255,255,255,0.8); display:flex; gap:10px;"><span style="color:var(--gold);">✓</span> Site selection assistance</li>
+            <li style="font-size:13px; color:rgba(255,255,255,0.8); display:flex; gap:10px;"><span style="color:var(--gold);">✓</span> Construction coordination</li>
+            <li style="font-size:13px; color:rgba(255,255,255,0.8); display:flex; gap:10px;"><span style="color:var(--gold);">✓</span> Ownership documentation support</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Savings Schemes -->
+      <div class="service-card gold-card">
+        <div class="service-icon">💰</div>
+        <h3 class="service-title">Savings Schemes</h3>
+        <p class="service-desc">Grow your wealth with disciplined and flexible savings plans. Choose recurring or fixed options tailored to your goals. Safe, consistent, and designed for long-term financial stability.</p>
+        <span class="service-tag">Disciplined Savings</span>
+      </div>
+
+      <!-- Loans -->
+      <div class="service-card green-card">
+        <div class="service-icon">🏦</div>
+        <h3 class="service-title">Loan Facilities</h3>
+        <p class="service-desc">Access financial support when you need it most. Housing and personal loans with smooth processing, transparent terms, and customer-friendly repayment options to empower your goals.</p>
+        <span class="service-tag">Financial Support</span>
+      </div>
+
+      <!-- Health Insurance -->
+      <div class="service-card light-card">
+        <div class="service-icon">🏥</div>
+        <h3 class="service-title">Health Insurance</h3>
+        <p class="service-desc">Protect your family from unexpected medical expenses with comprehensive health coverage. Includes hospitalisation support, treatment protection, and dependable claim assistance.</p>
+        <span class="service-tag">Medical Protection</span>
+      </div>
+
+      <!-- Life Insurance -->
+      <div class="service-card light-card">
+        <div class="service-icon">🧍</div>
+        <h3 class="service-title">Life Insurance</h3>
+        <p class="service-desc">Secure your loved ones with reliable life coverage. Flexible plans including term and endowment options provide long-term financial protection through life's uncertainties.</p>
+        <span class="service-tag">Family Security</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="section-inner">
+    <div class="section-tag">Why Mayura</div>
+    <h2 class="section-title">Trusted. Certified. Committed.</h2>
+    <p class="section-desc">We combine quality systems, experienced professionals, and a customer-first approach to deliver services you can rely on.</p>
+    <div class="why-grid">
+      <div class="why-features">
+        <div class="why-feature">
+          <div class="why-feature-icon">🏆</div>
+          <div>
+            <div class="why-feature-title">ISO 9001:2015 Certified</div>
+            <div class="why-feature-text">Our quality management systems are independently verified, ensuring consistent service delivery and customer satisfaction at every touchpoint.</div>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">🤝</div>
+          <div>
+            <div class="why-feature-title">One-Stop Financial Partner</div>
+            <div class="why-feature-text">From building your home to insuring your health and life — we bring all essential services together so you don't have to look elsewhere.</div>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">📍</div>
+          <div>
+            <div class="why-feature-title">Deeply Local, Genuinely Caring</div>
+            <div class="why-feature-text">Rooted in Coimbatore, we understand the unique needs of our community and provide personalised guidance in the language of your choice.</div>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">🔒</div>
+          <div>
+            <div class="why-feature-title">Transparent & Trustworthy</div>
+            <div class="why-feature-text">No hidden charges, no confusing jargon. We believe in honest communication and building relationships that last generations.</div>
+          </div>
+        </div>
+      </div>
+      <div class="why-cert">
+        <div class="cert-ring">
+          <span>ISO</span>
+          <span>CERTIFIED</span>
+        </div>
+        <div class="cert-title">Quality Management System</div>
+        <div class="cert-subtitle">ISO 9001:2015 Compliant</div>
+        <p class="cert-desc">
+          Mayura Groups Limited has been independently assessed and certified compliant with ISO 9001:2015 standards for Housing Development, Savings Schemes, and Loan services.
+        </p>
+        <div class="cert-no">Certificate No: EU-02-D-5214</div>
+        <p style="margin-top:18px; font-size:12px; color:rgba(255,255,255,0.5); line-height:1.6;">Verified by EU Certification Limited, London. Our commitment to quality and continuous improvement is independently assured.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section id="careers">
+  <div class="section-inner">
+    <div class="section-tag">Join Our Team</div>
+    <h2 class="section-title">Grow With Mayura</h2>
+    <p class="section-desc">We are always looking for motivated individuals who share our passion for making a difference in people's lives.</p>
+    <div class="careers-grid">
+      <div class="careers-info">
+        <p style="font-size:15px; color:var(--text-mid); line-height:1.7; margin-bottom:8px;">
+          At Mayura Groups Limited, we believe our people are our greatest strength. Whether you come from a sales, finance, or operations background — there is a place for you here.
+        </p>
+        <div class="roles-list" aria-label="Open roles">
+          <div class="role-chip">Marketing Executive</div>
+          <div class="role-chip">Field Agent</div>
+          <div class="role-chip">Loan Officer</div>
+          <div class="role-chip">Insurance Advisor</div>
+          <div class="role-chip">Customer Relationship Manager</div>
+          <div class="role-chip">Operations Staff</div>
+        </div>
+        <div class="careers-perks">
+          <div class="perk">
+            <div class="perk-icon">📈</div>
+            <div class="perk-text">Performance-linked incentives & growth opportunities</div>
+          </div>
+          <div class="perk">
+            <div class="perk-icon">🎓</div>
+            <div class="perk-text">In-house training and skill development programs</div>
+          </div>
+          <div class="perk">
+            <div class="perk-icon">🤲</div>
+            <div class="perk-text">Supportive team culture rooted in community values</div>
+          </div>
+          <div class="perk">
+            <div class="perk-icon">📍</div>
+            <div class="perk-text">Local opportunities across Coimbatore region</div>
+          </div>
+          <div class="perk">
+            <div class="perk-icon">🏢</div>
+            <div class="perk-text">Work for an ISO certified, growing organization</div>
+          </div>
+        </div>
+      </div>
+      <div class="careers-form">
+        <div class="form-title">Apply Now</div>
+        <p class="form-subtitle">Fill in your details and our team will get back to you shortly.</p>
+        <form id="careerForm" action="https://formspree.io/f/xnjojggk" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" name="name" placeholder="Your full name" required/>
+            </div>
+            <div class="form-group">
+              <label>Mobile Number *</label>
+              <input type="tel" name="phone" placeholder="+91 93442 10338" pattern="^((\\+91)?[ -]?)?[6-9][0-9]{9}$" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" name="email" placeholder="your@email.com" required/>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Position Applying For *</label>
+              <select name="position" title="Position Applying For" required>
+                <option value="">Select a role</option>
+                <option>Marketing Executive</option>
+                <option>Field Agent</option>
+                <option>Loan Officer</option>
+                <option>Insurance Advisor</option>
+                <option>Customer Relationship Manager</option>
+                <option>Operations Staff</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Qualification</label>
+              <select name="qualification" title="Qualification">
+                <option value="">Select qualification</option>
+                <option>10th Pass</option>
+                <option>12th Pass</option>
+                <option>Diploma</option>
+                <option>Graduate (BA/BSc/BCom)</option>
+                <option>Postgraduate</option>
+                <option>Professional Degree</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Experience (Years)</label>
+              <select name="experience" title="Experience">
+                <option value="">Select</option>
+                <option>Fresher (0 years)</option>
+                <option>1 – 2 years</option>
+                <option>3 – 5 years</option>
+                <option>5+ years</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Current Location</label>
+              <input type="text" name="location" placeholder="City, District"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Why do you want to join Mayura?</label>
+            <textarea name="message" placeholder="Tell us a bit about yourself and why you'd like to join our team..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Submit Application →</button>
+        </form>
+        <p class="form-note">
+          ✓ Submissions sent directly to our inbox. We'll respond within 24 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">We'd Love to Hear From You</h2>
+    <p class="section-desc">Have questions about our services? Reach out and our team will respond promptly.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-block">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Branches</div>
+            <div class="contact-value">HQ: 7/25_1 Floor, NSN Palayam, Mettupalayam Road, Coimbatore – 641031, Tamil Nadu<br/>Branch: Yedakadu, The Nilgiris, Tamil Nadu</div>
+          </div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Phone / WhatsApp</div>
+            <div class="contact-value"><a href="tel:+919344210338">+91 93442 10338</a><br/><a href="https://wa.me/919344210338" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div>
+          </div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:mayura1141110@gmail.com">mayura1141110@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">Working Hours</div>
+            <div class="contact-value">Monday – Saturday: 9:00 AM – 6:00 PM<br/>Sunday: By Appointment</div>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.0!2d76.7!3d11.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDIxJzAwLjAiTiA3NsKwNDInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+            title="Mayura Groups Office Location"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <div class="contact-form-title">Send Us an Enquiry</div>
+        <form id="contactForm" action="https://formspree.io/f/mqegeyga" method="POST">
+          <div class="form-group">
+            <label>Your Name *</label>
+            <input type="text" name="name" placeholder="Full name" required/>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Mobile *</label>
+              <input type="tel" name="phone" placeholder="+91 93442 10338" pattern="^((\\+91)?[ -]?)?[6-9][0-9]{9}$" required/>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="your@email.com"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service Interested In</label>
+            <select name="service" title="Service Interested In">
+              <option value="">Select a service</option>
+              <option>Housing Development</option>
+              <option>Savings Schemes</option>
+              <option>Loan Facilities</option>
+              <option>Health Insurance</option>
+              <option>Life Insurance</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message *</label>
+            <textarea name="message" placeholder="Tell us how we can help you..." required style="min-height:120px;"></textarea>
+          </div>
+          <button type="submit" class="btn-submit" style="background:var(--gold); color:var(--navy-dark);">Send Enquiry →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">MAYURA GROUPS LIMITED</div>
+      <div class="footer-tagline">"Crafting Infrastructure, Enriching Lives"</div>
+      <p class="footer-desc">A trusted multi-service company offering Housing Development, Savings, Loans, and Insurance services from the heart of Coimbatore.</p>
+      <div class="footer-iso">✓ &nbsp; ISO 9001:2015 Certified &nbsp;|&nbsp; Cert No: EU-02-D-5214</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Our Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">🏗️ Housing Development</a></li>
+        <li><a href="#services">💰 Savings Schemes</a></li>
+        <li><a href="#services">🏦 Loan Facilities</a></li>
+        <li><a href="#services">🏥 Health Insurance</a></li>
+        <li><a href="#services">🧍 Life Insurance</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="social-links">
+        <a class="social-link" href="#" aria-label="Facebook">Facebook</a>
+        <a class="social-link" href="#" aria-label="Instagram">Instagram</a>
+        <a class="social-link" href="#" aria-label="YouTube">YouTube</a>
+        <a class="social-link" href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+      <div style="margin-top:24px;">
+        <div class="footer-col-title">Address</div>
+        <p style="font-size:12px; line-height:1.7; color:rgba(255,255,255,0.45);">
+          HQ: 7/25_1 Floor, NSN Palayam,<br/>
+          Mettupalayam Road, Coimbatore – 641031.<br/>
+          Branch: Yedakadu, The Nilgiris,<br/>
+          Tamil Nadu, India.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Mayura Groups Limited. All rights reserved.</span>
+    <span class="footer-cert-no">Company No: 15665772</span>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a class="wa-btn" href="https://wa.me/919344210338" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.506.656 4.858 1.804 6.893L2 30l7.332-1.775A13.93 13.93 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.43 11.43 0 01-5.828-1.594l-.418-.248-4.352 1.053 1.083-4.237-.272-.437A11.47 11.47 0 014.5 16C4.5 9.649 9.649 4.5 16 4.5S27.5 9.649 27.5 16 22.351 27.5 16 27.5zm6.29-8.598c-.345-.172-2.04-1.005-2.355-1.12-.316-.115-.547-.172-.778.172-.23.345-.895 1.12-1.095 1.35-.2.23-.4.258-.745.086-.345-.172-1.456-.537-2.772-1.71-1.025-.913-1.717-2.04-1.918-2.385-.2-.345-.021-.53.15-.701.154-.154.345-.4.518-.6.172-.2.23-.345.345-.575.115-.23.057-.43-.029-.602-.086-.172-.778-1.878-1.065-2.57-.28-.676-.565-.584-.778-.595l-.662-.011c-.23 0-.603.086-.92.43-.315.345-1.207 1.18-1.207 2.878s1.237 3.338 1.409 3.568c.172.23 2.434 3.718 5.898 5.212.825.356 1.468.569 1.97.729.827.264 1.58.227 2.175.137.663-.1 2.04-.834 2.328-1.639.287-.805.287-1.495.2-1.64-.086-.143-.316-.23-.66-.4z"/>
+  </svg>
+</a>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+}
+
+// Smooth scroll active link highlight
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 100) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.style.color = '';
+    if (link.getAttribute('href') === `#${current}`) {
+      link.style.color = 'var(--gold)';
+    }
+  });
+});
+</script>
+</body>
+</html>
