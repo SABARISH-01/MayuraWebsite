@@ -14,7 +14,7 @@ function Careers() {
             <div className="roles-list" aria-label="Open roles">
               <div className="role-chip">Marketing Executive</div>
               <div className="role-chip">Field Agent</div>
-              <div className="role-chip">Loan Officer</div>
+              <div className="role-chip">DSA</div>
               <div className="role-chip">Insurance Advisor</div>
               <div className="role-chip">Customer Relationship Manager</div>
               <div className="role-chip">Operations Staff</div>
@@ -56,7 +56,7 @@ function Careers() {
                     <option value="">Select a role</option>
                     <option>Marketing Executive</option>
                     <option>Field Agent</option>
-                    <option>Loan Officer</option>
+                    <option>DSA</option>
                     <option>Insurance Advisor</option>
                     <option>Customer Relationship Manager</option>
                     <option>Operations Staff</option>
