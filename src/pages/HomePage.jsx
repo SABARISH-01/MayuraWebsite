@@ -1,6 +1,7 @@
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Services from '../components/Services'
+import ImpactStats from '../components/ImpactStats'
 import WhyChooseUs from '../components/WhyChooseUs'
 import Careers from '../components/Careers'
 import Contact from '../components/Contact'
@@ -13,6 +14,7 @@ function HomePage() {
       <Hero />
       <About />
       <Services />
+      <ImpactStats />
       <WhyChooseUs />
       <Careers />
       <Contact />

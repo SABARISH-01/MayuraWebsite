@@ -673,6 +673,64 @@ section { padding: 90px 5%; }
 
 .service-includes-check { color: var(--gold); }
 
+/* â”€â”€â”€ IMPACT STATS â”€â”€â”€ */
+#impact-stats {
+  background: linear-gradient(125deg, #f4eee1 0%, #f9f4e8 54%, #eff5f2 100%);
+}
+
+.impact-wrap {
+  border: 1px solid rgba(27,45,91,0.08);
+  border-radius: 24px;
+  background: rgba(255,255,255,0.66);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  padding: 44px;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.impact-copy .section-title { margin-bottom: 14px; }
+
+.impact-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.impact-stat-card {
+  background: white;
+  border: 1px solid rgba(27,45,91,0.08);
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 12px 28px rgba(27,45,91,0.08);
+}
+
+.impact-stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 0.95;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.impact-stat-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.impact-stat-note {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
 /* â”€â”€â”€ WHY CHOOSE â”€â”€â”€ */
 #why { background: var(--navy); padding: 90px 5%; }
 #why .section-title { color: white; }
@@ -1104,6 +1162,7 @@ footer {
   .about-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr 1fr; }
   .service-card.wide { grid-column: span 2; }
+  .impact-wrap { grid-template-columns: 1fr; padding: 34px; }
   .why-grid { grid-template-columns: 1fr; }
   .careers-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
@@ -1116,6 +1175,8 @@ footer {
 @media (max-width: 600px) {
   .services-grid { grid-template-columns: 1fr; }
   .service-card.wide { grid-column: span 1; display: block; }
+  .impact-wrap { padding: 26px; }
+  .impact-stats-grid { grid-template-columns: 1fr; }
   section { padding: 60px 5%; }
 }
 
